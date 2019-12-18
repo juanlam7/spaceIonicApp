@@ -1,0 +1,44 @@
+
+  
+  <ion-content padding='true' color="medium" class="container">
+    <div class="espacio">
+        <img src="https://lh3.googleusercontent.com/KF83lKh06xtEcUEFd7E0knhmra51Ieno3Pc4xCOED1om7zq-hHAjOhcWy9lRKVms41sg=w115" class="smallLogo"/>
+        <h1>Space Travel</h1>
+        <br>
+        <ion-button color="dark" routerLinkActive="active" size="small" fill="clear">SIGN IN</ion-button>
+        <ion-button color="dark" routerLinkActive="active" routerLink='/signup' size="small"  fill="clear">SIGN UP</ion-button>
+        <form #form="ngForm">
+            <ion-grid>
+              <ion-row color="success" class="ion-justify-content-center">
+                <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+                  <div class="ion-padding" >
+                    <ion-item class="borde1">
+                      <ion-icon name="mail" slot="start"></ion-icon>
+                      <ion-label position="floating">Enter your email</ion-label>
+                      <ion-input name="user" type="text" [(ngModel)]="email" ngModel required></ion-input>
+                    </ion-item>
+                    <ion-item class="borde2">
+                      <ion-icon name="lock" slot="start"></ion-icon>
+                      <ion-label position="floating">Password</ion-label>
+                      <ion-input name="password" type="password" [(ngModel)]="password" ngModel required></ion-input>
+                    </ion-item>
+                  </div>
+                  <div class="ion-padding">
+                    <ion-button color="success" size="large" type="submit" [disabled]="form.invalid" (click)="onSubmitLogin()" >Log in</ion-button>
+                  </div>
+                  <p>Forgot password?</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </form>
+        <ion-button color="light">
+            <ion-icon name="logo-twitter" ></ion-icon>
+        </ion-button>
+        <ion-button color="warning">
+            <ion-icon name="logo-facebook" ></ion-icon>
+        </ion-button>
+        <ion-button color="danger">
+            <ion-icon name="logo-google" ></ion-icon>
+        </ion-button>
+    </div>
+  </ion-content>
